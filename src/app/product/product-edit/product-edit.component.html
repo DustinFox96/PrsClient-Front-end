@@ -1,0 +1,63 @@
+<app-menu></app-menu>
+<div>
+        <div>
+            <span>Product Edit</span>
+        </div>
+            <table class="table table-sm" *ngIf="product">
+        
+            <tr>
+                <th>Id</th>
+                <td>
+                    <input [(ngModel)]="product.id" type="number" disabled>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>PartNbr</th>
+                <td>
+                    <input [(ngModel)]="product.partNbr" type="text">
+                </td>
+            </tr>
+        
+            <tr>
+                <th>Name</th>
+                <td>
+                    <input [(ngModel)]="product.name" type="text">
+                </td>
+            </tr>
+        
+            <tr>
+                <th>price</th>
+                <td>
+                    <input [(ngModel)]="product.price" type="number">
+                </td>
+            </tr>
+        
+            <tr>
+                <th>Unit</th>
+                <td>
+                    <input [(ngModel)]="product.unit" type="text">
+                </td>
+            </tr>
+        
+            <tr>
+                <th>PhotoPath</th>
+                <td>
+                    <input [(ngModel)]="product.photoPath" type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Vendorname</th>
+                <td>
+                    <select [(ngModel)]="product.vendorId">
+                        <option *ngFor="let vendor of vendors" value={{vendor.id}}>{{vendor.name}}</option>
+                    </select>
+                </td>
+            </tr>
+        
+                  
+    </table>
+    
+    <button (click)="save()" class=" btn btn-primary">Save</button>
+</div>

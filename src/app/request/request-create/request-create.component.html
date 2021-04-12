@@ -1,0 +1,67 @@
+<app-menu></app-menu>
+
+<div>
+    <div>
+        <span>Request Create</span>
+    </div>
+    <table class="table table-sm">
+
+        <tr>
+            <th>Id</th>
+            <td>
+                <input [(ngModel)]="request.id" type="number"disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Description</th>
+            <td>
+                <input [(ngModel)]="request.description" type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Justfication</th>
+            <td>
+                <input [(ngModel)]="request.justfication" type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Rejection Reason</th>
+            <td>
+                <input [(ngModel)]="request.rejectionReasson" type="text" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Delivery Mode</th>
+            <td>
+                <input [(ngModel)]="request.deliveryMode" type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Status</th>
+            <td>
+                <input [(ngModel)]="request.status" type="text" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Total</th>
+            <td>
+                <input [(ngModel)]="request.total" type="number" disabled>
+            </td>
+        </tr>
+
+        <!-- <tr>
+            <th>Users Name</th>
+            <td>
+                <select [(ngModel)]="request.userId">
+                    <option *ngFor="let request of requests" value={{user.id}}>{{user.firstname}}</option>
+                </select>
+            </td>
+        </tr> -->
+
+    <button (click)="save()" class="btn btn-primary">Save</button>

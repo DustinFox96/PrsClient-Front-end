@@ -1,0 +1,70 @@
+<app-menu></app-menu>
+
+<div>
+    <table class="table table-sm" *ngIf="request">
+
+        <tr>
+            <th>Id</th>
+            <td>
+                <input [(ngModel)]="request.id" type="number" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Description</th>
+            <td>
+                <input [(ngModel)]="request.description" type="text" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Justfication</th>
+            <td>
+                <input [(ngModel)]="request.justfication" type="text" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>RejectionReason</th>
+            <td>
+                <input [(ngModel)]="request.rejectionReasson" type="text" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>DeliveryMode</th>
+            <td>
+                <input [(ngModel)]="request.deliveryMode" type="text" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Status</th>
+            <td>
+                <input [(ngModel)]="request.status" type="text" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Total</th>
+            <td>
+                <input [(ngModel)]="request.total" type="number" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Users Name</th>
+            <td>
+                <input [(ngModel)]="request.user.firstname" type="text" disabled>
+            </td>
+        </tr>
+
+    </table>
+    
+    <!-- <button (click)="edit()" class=" btn btn-warning">Edit</button> | -->
+    <button (click)="toggleVerify()" class=" btn btn-danger">Delete</button>
+
+    <span *ngIf="showVerify">
+       | <button (click)="delete()" class=" btn btn-danger">Verify Delete</button>
+    </span>
+</div>

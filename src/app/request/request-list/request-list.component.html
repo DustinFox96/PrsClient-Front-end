@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div>
+    <div>
+        <span>Request list</span> |
+        <span><a routerLink="/requests/create">Create</a></span> |
+        <!-- <span>
+            <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
+        </span> -->
+    </div>
+    <table class="table table-sm">
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Reject reason</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Users Name</th>
+        </tr>
+
+        <!-- <tr *ngFor="let request of requests | searchRequest: searchCriteria"> -->
+            <tr *ngFor="let request of requests">
+
+        <td>{{request.id}}</td>
+        <td>{{request.description}}</td>
+        <td>{{request.rejectReason}}</td>
+        <td>{{request.status}}</td>
+        <td>{{request.total}}</td>
+        <td *ngIf="request.user">{{request.user.firstname}}</td>
+       
+        <td>
+            <a routerLink="/requests/detail/{{request.id}}">Detail</a> |
+            <a routerLink="/requests/edit/{{request.id}}">Edit</a> |
+            <a routerLink="/requests/lines/{{request.id}}">Lines</a>
+        </td>
+        
+        </tr>
+    </table>
+</div>
