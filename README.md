@@ -1,5 +1,7 @@
 # PrsClient
 
+This project is connected to a backend server that needs to be ran on your personal machine in order for the front-end to be displayed https://github.com/DustinFox96/PrsServer-Backend.git
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Development server
